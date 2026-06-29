@@ -1,0 +1,4 @@
+family,variant,label,n_bootstrap,prauc_median,prauc_q25,prauc_q75
+RF,baseline,Baseline (S/L ratio),1000,0.2642627795951674,0.23032791338682157,0.2997874099081913
+RF,mean,$|\Delta\beta|$/mean coupling,1000,0.3015271117124467,0.2612024575238199,0.340779390403754
+RF,one_plus_lambda,"$1+\lambda\,\tilde{\Delta\beta}$ coupling",1000,0.34049136447307815,0.2971531282966219,0.38788886335210176

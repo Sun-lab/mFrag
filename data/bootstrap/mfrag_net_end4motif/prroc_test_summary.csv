@@ -1,0 +1,2 @@
+model,n_bootstrap,n_bootstrap_requested,prauc_median,prauc_q25,prauc_q75,prevalence
+motif_meth3ch_new_rep006,1000,1000,0.4831547633537395,0.43113093070382574,0.5316358314559977,0.10672853828306264

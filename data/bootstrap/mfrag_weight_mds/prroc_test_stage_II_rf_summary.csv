@@ -1,0 +1,4 @@
+stage_group,family,variant,prauc_median
+stage_II,RF,baseline,0.03412903059621078
+stage_II,RF,mean,0.03290804036752619
+stage_II,RF,one_minus_lambda,0.05644949905744703

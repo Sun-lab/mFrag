@@ -1,0 +1,4 @@
+stage_group,family,variant,auc_median
+stage_I,RF,baseline,0.45554841473864605
+stage_I,RF,mean,0.4990814771231286
+stage_I,RF,one_minus_lambda,0.4880528991746367

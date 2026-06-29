@@ -1,0 +1,4 @@
+family,variant,label,n_bootstrap,auc_median,auc_q25,auc_q75
+RF,baseline,Baseline (S/L ratio),1000,0.7810511806816968,0.7632558831566794,0.8023391220603391
+RF,mean,$|\Delta\beta|$/mean coupling,1000,0.8016693064409863,0.7823351468861619,0.8200612776098926
+RF,one_plus_lambda,"$1+\lambda\,\tilde{\Delta\beta}$ coupling",1000,0.7856433597185577,0.7659650083338607,0.805255305560149

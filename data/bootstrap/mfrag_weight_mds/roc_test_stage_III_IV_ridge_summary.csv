@@ -1,0 +1,4 @@
+stage_group,family,variant,auc_median
+stage_III_IV,Ridge,baseline,0.9281559045956951
+stage_III_IV,Ridge,mean,0.8936036404540341
+stage_III_IV,Ridge,one_minus_lambda,0.8917525773195876

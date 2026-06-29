@@ -1,0 +1,4 @@
+stage_group,family,variant,prauc_median
+stage_III_IV,Ridge,baseline,0.3411782661782662
+stage_III_IV,Ridge,mean,0.2274275905499133
+stage_III_IV,Ridge,one_minus_lambda,0.24522430492302974

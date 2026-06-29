@@ -1,0 +1,5 @@
+model_key,label,n_bootstrap,auc_median,auc_q25,auc_q75
+lasso_baseline,Baseline Lasso S/L ratio,1000,0.8728925542449685,0.8545958477730715,0.8877294243149918
+lasso_mean,Lasso S/L ratio $|\Delta\beta|$ / mean coupling,1000,0.8832767246871438,0.8676016062497134,0.8983189716787278
+cnn_fragonly,CNN fragment length only,1000,0.8177109484700533,0.7911132749334392,0.8436320523444846
+cnn_frag_meth,CNN fragment length + DNA methylation,1000,0.8307000863586542,0.8064197769373673,0.8537795500396579

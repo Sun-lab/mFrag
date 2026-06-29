@@ -1,0 +1,4 @@
+family,variant,label,n_bootstrap,auc_median,auc_q25,auc_q75
+Lasso,baseline,Baseline (S/L ratio),1000,0.8712322264286607,0.8557929366910624,0.8908678884812231
+Lasso,mean,$|\Delta\beta|$/mean coupling,1000,0.8828354037893406,0.8672856837724616,0.8982359185833785
+Lasso,one_plus_lambda,"$1+\lambda\,\tilde{\Delta\beta}$ coupling",1000,0.8813679723969962,0.865007580681507,0.8970433319344934

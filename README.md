@@ -54,6 +54,8 @@ export PYTHONPATH=$MFRAG_ROOT/code:$PYTHONPATH
 
 Coupling weights for mFrag-Weight are in `data/supplementary_file_1_coupling_weights.csv` (also rebuildable via `code/scripts/build_supplementary_file_1.py`).
 
+**Processed study data** (matrices, predictions, bootstrap summaries) are hosted in [`data/`](data/) on GitHub; see [`data/README.md`](data/README.md) and [`docs/DATA_AVAILABILITY.md`](docs/DATA_AVAILABILITY.md) for the manuscript Data availability statement.
+
 ## Quick start
 
 ### 1. Preprocess one sample (BAM → model inputs)

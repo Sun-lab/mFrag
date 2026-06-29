@@ -1,0 +1,4 @@
+stage_group,stage_label,family,variant,label,n_pool,n_healthy,n_cancer_stage,n_bootstrap,auc_median,auc_q25,auc_q75
+stage_III_IV,Stage III + IV,RF,baseline,Baseline (S/L ratio),391,385,6,999,0.8476190476190475,0.7992080917342015,0.9002590673575129
+stage_III_IV,Stage III + IV,RF,mean,$|\Delta\beta|$/mean coupling,391,385,6,994,0.8702016424529513,0.8259916160862636,0.9100855849030213
+stage_III_IV,Stage III + IV,RF,one_plus_lambda,"$1+\lambda\,\tilde{\Delta\beta}$ coupling",391,385,6,997,0.8170984455958549,0.7642487046632125,0.8671916010498688

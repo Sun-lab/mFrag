@@ -1,0 +1,4 @@
+family,variant,label,n_bootstrap,prauc_median,prauc_q25,prauc_q75
+Lasso,baseline,Baseline (S/L ratio),1000,0.45993312113800067,0.4116737746228518,0.5139442674533672
+Lasso,mean,$|\Delta\beta|$/mean coupling,1000,0.5266407649790752,0.472926029226561,0.5730116289271585
+Lasso,one_plus_lambda,"$1+\lambda\,\tilde{\Delta\beta}$ coupling",1000,0.47035288518468954,0.42192697530158907,0.5163153245820029

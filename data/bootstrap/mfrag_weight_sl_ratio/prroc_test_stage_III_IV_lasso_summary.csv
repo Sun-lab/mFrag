@@ -1,0 +1,4 @@
+stage_group,stage_label,family,variant,label,n_pool,n_healthy,n_cancer_stage,n_bootstrap,prauc_median,prauc_q25,prauc_q75
+stage_III_IV,Stage III + IV,Lasso,baseline,Baseline (S/L ratio),391,385,6,998,0.40093117131910233,0.2532114624505929,0.5197852474323063
+stage_III_IV,Stage III + IV,Lasso,mean,$|\Delta\beta|$/mean coupling,391,385,6,998,0.3799122807017544,0.2417906178489702,0.5075006012506013
+stage_III_IV,Stage III + IV,Lasso,one_plus_lambda,"$1+\lambda\,\tilde{\Delta\beta}$ coupling",391,385,6,999,0.42238095238095236,0.29222160741557296,0.5388590877721313

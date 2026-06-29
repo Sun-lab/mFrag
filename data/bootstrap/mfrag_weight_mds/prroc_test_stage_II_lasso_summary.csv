@@ -1,0 +1,4 @@
+stage_group,family,variant,prauc_median
+stage_II,Lasso,baseline,0.054786276330013414
+stage_II,Lasso,mean,0.06409101004624929
+stage_II,Lasso,one_minus_lambda,0.08272564212921535

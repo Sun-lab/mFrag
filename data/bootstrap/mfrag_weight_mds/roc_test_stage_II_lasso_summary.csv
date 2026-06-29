@@ -1,0 +1,4 @@
+stage_group,family,variant,auc_median
+stage_II,Lasso,baseline,0.6045873195969569
+stage_II,Lasso,mean,0.6408668730650156
+stage_II,Lasso,one_minus_lambda,0.7047619047619047

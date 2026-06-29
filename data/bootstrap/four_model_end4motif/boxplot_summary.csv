@@ -1,0 +1,9 @@
+group_key,group_label,metric,n,median,q25,q75
+lasso_baseline,Baseline Lasso Shannon entropy,auc,1000,0.6537533430434722,0.6244040915985541,0.6816423355479468
+lasso_baseline,Baseline Lasso Shannon entropy,prauc,1000,0.2636585891996208,0.22339528107796874,0.3027516391878875
+lasso_one_minus_lambda,"Lasso Shannon entropy $(1-\lambda\,\tilde{\Delta\beta})$ coupling",auc,1000,0.6952202425299491,0.6661270277341705,0.722267984008635
+lasso_one_minus_lambda,"Lasso Shannon entropy $(1-\lambda\,\tilde{\Delta\beta})$ coupling",prauc,1000,0.30751360698705965,0.2648136593233383,0.35140030894826274
+cnn_end4motif,CNN end 4-mer motif only,auc,1000,0.7666929133858267,0.7375220649232317,0.7930709854151772
+cnn_end4motif,CNN end 4-mer motif only,prauc,1000,0.43745048178057666,0.38986234599780234,0.48681986564523044
+cnn_motif_meth,CNN end 4-mer motif + DNA methylation,auc,1000,0.8015311372241991,0.7751829102064951,0.8262293108746784
+cnn_motif_meth,CNN end 4-mer motif + DNA methylation,prauc,1000,0.48315476335373947,0.4311309307038257,0.5316358314559977

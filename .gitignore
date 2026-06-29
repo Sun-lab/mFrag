@@ -1,10 +1,11 @@
-# Large generated / cohort data (use symlinks or download separately)
-data/lung_cancer/**/*
-!data/lung_cancer/**/.gitkeep
-!data/README.md
-
 # Pooled WGBS single-CpG tables (~650–775 MB each; see data/README.md)
 data/external_methylation/pooled_*_single_cpg_sites.csv
+
+# Track study outputs (matrices are large but required for reproduction)
+!data/mfrag_weight/**
+!data/predictions/**
+!data/bootstrap/**
+!data/lung_cancer/**/*.csv
 
 # Python
 __pycache__/

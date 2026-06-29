@@ -1,0 +1,2 @@
+model,n_bootstrap,n_bootstrap_requested,auc_median,auc_q25,auc_q75
+motif_meth3ch_new_rep006,1000,1000,0.8015311372241991,0.7751829102064951,0.8262293108746784

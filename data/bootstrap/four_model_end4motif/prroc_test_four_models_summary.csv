@@ -1,0 +1,5 @@
+model_key,label,n_bootstrap,prauc_median,prauc_q25,prauc_q75
+lasso_baseline,Baseline Lasso Shannon entropy,1000,0.25750036105022556,0.2195272771879201,0.29790073320091615
+lasso_one_minus_lambda,"Lasso Shannon entropy $(1-\lambda\,\tilde{\Delta\beta})$ coupling",1000,0.304586995687635,0.2608381276791374,0.3483459592846043
+cnn_end4motif,CNN end 4-mer motif only,1000,0.4374504817805767,0.38986234599780234,0.4868198656452305
+cnn_motif_meth,CNN end 4-mer motif + DNA methylation,1000,0.4831547633537395,0.43113093070382574,0.5316358314559977

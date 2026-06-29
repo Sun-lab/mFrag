@@ -1,0 +1,2 @@
+model,n_bootstrap,n_bootstrap_requested,auc_median,auc_q25,auc_q75
+frag_meth3ch_new_rep031,1000,1000,0.8307000863586542,0.8064197769373673,0.8537795500396579

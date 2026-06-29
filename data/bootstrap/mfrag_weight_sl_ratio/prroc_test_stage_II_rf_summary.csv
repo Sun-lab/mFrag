@@ -1,0 +1,4 @@
+stage_group,stage_label,family,variant,label,n_pool,n_healthy,n_cancer_stage,n_bootstrap,prauc_median,prauc_q25,prauc_q75
+stage_II,Stage II,RF,baseline,Baseline (S/L ratio),397,385,12,1000,0.07251195876318667,0.05445809762544371,0.0922611566919261
+stage_II,Stage II,RF,mean,$|\Delta\beta|$/mean coupling,397,385,12,1000,0.13464991359470652,0.08900920961535565,0.1906356271044353
+stage_II,Stage II,RF,one_plus_lambda,"$1+\lambda\,\tilde{\Delta\beta}$ coupling",397,385,12,1000,0.20188439207636907,0.13132755206410324,0.27397153832175347
