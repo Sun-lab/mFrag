@@ -1,0 +1,4 @@
+lambda,model,family,description,n_features,db_tilde_definition,n_windows_finite_abs_dbeta,n_pcs,best_C,cv_roc_auc,train_roc_auc,test_roc_auc,test_prauc,pca_evr_sum
+0.5,coupling_one_minus_lambda,l1,"z × max(1 − λ×Δβ̃, 0.05), λ=0.5",567,"min-max(rank(|Δβ_ext|)) on training windows, range [0,1]",528,54,215.44346900318823,0.7264305210918114,0.8904425473456972,0.6955392433653304,0.2989429490275663,0.8056233568212602
+1.0,coupling_one_minus_lambda,l1,"z × max(1 − λ×Δβ̃, 0.05), λ=1.0",567,"min-max(rank(|Δβ_ext|)) on training windows, range [0,1]",528,54,0.46415888336127775,0.7158086228287841,0.7991855558826416,0.5734048560135516,0.16530773951627495,0.8301574703045891
+2.0,coupling_one_minus_lambda,l1,"z × max(1 − λ×Δβ̃, 0.05), λ=2.0",567,"min-max(rank(|Δβ_ext|)) on training windows, range [0,1]",528,54,0.46415888336127775,0.6602714019851116,0.7574330291433619,0.5758328627893845,0.1628428326290728,0.888223413095408

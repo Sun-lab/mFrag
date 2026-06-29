@@ -1,0 +1,46 @@
+# Large generated / cohort data (use symlinks or download separately)
+data/lung_cancer/**/*
+!data/lung_cancer/**/.gitkeep
+!data/README.md
+
+# Pooled WGBS single-CpG tables (~650–775 MB each; see data/README.md)
+data/external_methylation/pooled_*_single_cpg_sites.csv
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+
+# Models (optional: track small joblib/pt via Git LFS instead)
+# code/mfrag_weight/**/models/*
+# code/mfrag_net/**/models/*
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+*.swp
+
+# Figure caches / logs
+**/*.npz
+**/*.log
+**/__pycache__/
+
+# Intermediate figure outputs in analysis/ (scripts are tracked)
+analysis/**/*.png
+analysis/**/*.pdf
+analysis/**/*.svg
+
+# Figure assets live in sibling repo mFrag_Figures/
+
+# Do NOT ignore these committed artifacts
+!data/supplementary_file_1_coupling_weights.csv
+!data/external_methylation/*.csv
+!data/gc_weights/*.csv
+!data/cohort/*.tsv
+!docs/figures/*.png

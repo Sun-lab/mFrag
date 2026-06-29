@@ -1,0 +1,1 @@
+chr5_5000000_10000000	Chr5:5Mb-10Mb window fragment length distribution	fragment_length_density_chr5_5000000_10000000_max_sl_lung_gt_healthy.png	fragment_length_sl_ratio_boxplot_chr5_5000000_10000000_max_sl_lung_gt_healthy.png

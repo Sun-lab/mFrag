@@ -1,0 +1,13 @@
+{
+  "model": "coupling_abs_dbeta_over_mean",
+  "description": "z \u00d7 (|\u0394\u03b2_ext| / mean(|\u0394\u03b2_ext|))",
+  "mean_abs_delta_beta": 0.11136252013257575,
+  "n_features": 567,
+  "n_pcs": 66,
+  "best_C": 0.1,
+  "cv_roc_auc": 0.8126339950372209,
+  "train_roc_auc": 0.8550191345304681,
+  "test_roc_auc": 0.8825522303783173,
+  "test_prauc": 0.5176759432918,
+  "pca_evr_sum": 0.7865170725112193
+}
