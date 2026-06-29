@@ -31,29 +31,28 @@ else
   git remote set-url origin "https://github.com/${REMOTE_REPO}.git"
 fi
 
-git add -A
-git status
-
-if git diff --cached --quiet; then
-  echo "Nothing to commit."
-else
-  git commit -m "$(cat <<'EOF'
+  /usr/bin/git add -A
+  if /usr/bin/git diff --cached --quiet; then
+    echo "Nothing to commit."
+  else
+    msgfile=$(mktemp)
+    cat >"$msgfile" <<'EOF'
 Initial public release of mFrag manuscript code and pretrained models.
 
 Packages mFrag-Weight and mFrag-Net inference, coupling weights (Supplementary File 1),
 figure reproduction scripts, and lung-cancer pretrained checkpoints.
 EOF
-)"
-fi
+    /usr/bin/git commit -F "$msgfile"
+    rm -f "$msgfile"
+  fi
 
 echo ""
 echo "==> Pushing to https://github.com/${REMOTE_REPO}"
-echo "    If the remote has unrelated history, use: git push -u origin main --force"
-read -r -p "Force push and replace remote main? [y/N] " ans
-if [[ "${ans}" =~ ^[Yy]$ ]]; then
-  git push -u origin main --force
+if [[ "${FORCE_PUSH:-0}" == "1" ]]; then
+  /usr/bin/git push -u origin main --force
 else
-  git push -u origin main
+  echo "    To replace existing ctCraft history: FORCE_PUSH=1 $0"
+  /usr/bin/git push -u origin main
 fi
 
 echo "Done: https://github.com/${REMOTE_REPO}"
