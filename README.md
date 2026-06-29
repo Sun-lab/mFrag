@@ -14,8 +14,8 @@ mFrag/
 ├── README.md
 ├── requirements.txt
 ├── code/
-│   ├── mfrag/                    # Importable Python package
-│   │   ├── preprocessing/        # BAM → feature tables
+│   ├── mfrag/preprocessing/    # Python package (import API)
+│   ├── preprocessing/          # CLI scripts (see below)
 │   │   ├── mfrag_weight/         # mFrag-Weight inference
 │   │   └── mfrag_net/            # mFrag-Net inference
 │   ├── mfrag_weight/.../models/  # Pretrained lung-cancer checkpoints
