@@ -14,13 +14,14 @@ mFrag/
 ├── README.md
 ├── requirements.txt
 ├── code/
-│   ├── mfrag/preprocessing/    # Python package (import API)
-│   ├── preprocessing/          # CLI scripts (see below)
+│   ├── mfrag/                    # Importable Python package
+│   │   ├── preprocessing/        # preprocessing API (import mfrag)
 │   │   ├── mfrag_weight/         # mFrag-Weight inference
 │   │   └── mfrag_net/            # mFrag-Net inference
+│   ├── preprocessing/            # CLI scripts (run from shell)
 │   ├── mfrag_weight/.../models/  # Pretrained lung-cancer checkpoints
 │   ├── mfrag_net/.../models/
-│   ├── scripts/                  # CLI utilities
+│   ├── scripts/                  # Other CLI utilities
 │   └── examples/                 # Runnable demos
 └── data/
     ├── external_methylation/     # Pooled WGBS reference tables
