@@ -16,6 +16,7 @@ dependencies = [
   "joblib>=1.2",
   "matplotlib>=3.6",
   "torch>=2.0",
+  "pyfaidx>=0.7.0",
 ]
 
 [project.optional-dependencies]

@@ -14,7 +14,7 @@ code/
 ├── mfrag/                      # import mfrag
 │   ├── coupling_weights.py     # Supplementary File 1 logic
 │   ├── paths.py
-│   ├── preprocessing/          # BAM pipeline wrappers
+│   ├── preprocessing/          # BAM → mFrag-Weight / mFrag-Net feature tables
 │   ├── mfrag_weight/           # MFragWeightSL, MFragWeightMDS
 │   └── mfrag_net/              # MFragNetFragLength, MFragNetEnd4Motif
 ├── mfrag_weight/               # trained Lasso models (lung + ovarian placeholder)
@@ -23,12 +23,18 @@ code/
 └── examples/
 ```
 
-## Inference
+## Preprocessing → inference
 
 ```python
-from mfrag import MFragNetFragLength
-model = MFragNetFragLength.from_pretrained()
-p = model.predict_proba("SAMPLE_STEM")
+from mfrag import (
+    prepare_fragment_csv,
+    build_mfrag_net_inputs,
+    build_mfrag_weight_inputs,
+    MFragNetFragLength,
+    MFragWeightSL,
+)
+
+# See code/examples/predict_lung_cancer.py and the root README.md
 ```
 
-Pre-built feature CSVs must live under `data/lung_cancer/{training,testing}/` (see `data/README.md`).
+Pre-built feature CSVs can live under `data/lung_cancer/{training,testing}/` or be generated with `build_mfrag_net_inputs` (see `data/README.md`).

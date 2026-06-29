@@ -1,40 +1,30 @@
 """mFrag-Net inference API (3-channel CNN)."""
 from __future__ import annotations
 
-import sys
 from dataclasses import replace
 from pathlib import Path
 
 import numpy as np
 import torch
 
+from mfrag.mfrag_net.architecture import (
+    FRAG_FINAL_EPOCHS,
+    FRAG_FINAL_LR,
+    FRAG_FINAL_WD,
+    MOTIF_FINAL_EPOCHS,
+    MOTIF_FINAL_LR,
+    MOTIF_FINAL_WD,
+    Preset29ThreeChannelCNN,
+    ThreeChannelZscoreDataset,
+    build_preset29_cfg,
+)
 from mfrag.paths import (
     LUNG_TEST_FRAG,
     LUNG_TEST_HREF,
     LUNG_TEST_LREF,
     LUNG_TEST_MOTIF,
-    MATHIOS_SCRIPTS,
     MFRAG_NET_FRAG_LUNG,
     MFRAG_NET_MOTIF_LUNG,
-)
-
-if str(MATHIOS_SCRIPTS) not in sys.path:
-    sys.path.insert(0, str(MATHIOS_SCRIPTS))
-
-from cnn_sweep_preset29_frag3ch_dual_beta_z import (  # noqa: E402
-    Preset29ThreeChannelCNN,
-    ThreeChannelZscoreDataset,
-    build_preset29_cfg,
-)
-from fdconv_final24_frag_meth3ch_new import (  # noqa: E402
-    FINAL_EPOCHS as FRAG_EPOCHS,
-    FINAL_LR as FRAG_LR,
-    FINAL_WD as FRAG_WD,
-)
-from fdconv_final24_motif_meth3ch_new import (  # noqa: E402
-    FINAL_EPOCHS as MOTIF_EPOCHS,
-    FINAL_LR as MOTIF_LR,
-    FINAL_WD as MOTIF_WD,
 )
 
 
@@ -95,14 +85,14 @@ class _MFragNetBase:
 class MFragNetFragLength(_MFragNetBase):
     default_weights = MFRAG_NET_FRAG_LUNG / "rep_031_weights.pt"
     default_main_dir = LUNG_TEST_FRAG
-    final_epochs = FRAG_EPOCHS
-    final_lr = FRAG_LR
-    final_wd = FRAG_WD
+    final_epochs = FRAG_FINAL_EPOCHS
+    final_lr = FRAG_FINAL_LR
+    final_wd = FRAG_FINAL_WD
 
 
 class MFragNetEnd4Motif(_MFragNetBase):
     default_weights = MFRAG_NET_MOTIF_LUNG / "rep_006_weights.pt"
     default_main_dir = LUNG_TEST_MOTIF
-    final_epochs = MOTIF_EPOCHS
-    final_lr = MOTIF_LR
-    final_wd = MOTIF_WD
+    final_epochs = MOTIF_FINAL_EPOCHS
+    final_lr = MOTIF_FINAL_LR
+    final_wd = MOTIF_FINAL_WD

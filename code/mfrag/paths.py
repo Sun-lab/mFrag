@@ -26,5 +26,8 @@ MFRAG_WEIGHT_MDS_LUNG = CODE_DIR / "mfrag_weight" / "mfrag_weight_mds" / "lung_c
 MFRAG_NET_FRAG_LUNG = CODE_DIR / "mfrag_net" / "mfrag_net_frag_length" / "lung_cancer" / "models"
 MFRAG_NET_MOTIF_LUNG = CODE_DIR / "mfrag_net" / "mfrag_net_end4motif" / "lung_cancer" / "models"
 
-# Legacy Mathios scripts used by preprocessing wrappers
-MATHIOS_SCRIPTS = MFRAG_ROOT.parent / "Mathios" / "scripts"
+# Bundled reference data defaults
+POOLED_HEALTHY_CPG = DATA_DIR / "external_methylation" / "pooled_23samples_cfDNA_single_cpg_sites.csv"
+POOLED_LUNG_CPG = DATA_DIR / "external_methylation" / "pooled_10samples_lung_single_cpg_sites.csv"
+WEIGHTS_TRAINING = DATA_DIR / "gc_weights" / "weights_training.csv"
+WEIGHTS_TESTING = DATA_DIR / "gc_weights" / "weights_testing.csv"
