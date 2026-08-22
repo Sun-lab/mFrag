@@ -15,8 +15,10 @@ data/
 ├── predictions/                                # held-out probabilities (train + test)
 │   ├── mfrag_weight_sl_ratio_{training,testing}.csv
 │   ├── mfrag_weight_mds_{training,testing}.csv
-│   ├── mfrag_net_frag_length_testing.csv
-│   └── mfrag_net_end4motif_testing.csv
+│   ├── mfrag_net_frag_length_{training,testing}.csv
+│   ├── mfrag_net_end4motif_testing.csv
+│   ├── mfrag_frag_length_{training,testing}.csv  # primary mFrag = 0.5*(Weight+Net)
+│   └── mfrag_motif_testing.csv                   # primary mFrag (motif modality)
 ├── bootstrap/                                  # bootstrap AUC/PR-AUC summaries
 │   ├── mfrag_weight_sl_ratio/
 │   ├── mfrag_weight_mds/

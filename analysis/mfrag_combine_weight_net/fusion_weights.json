@@ -1,0 +1,10 @@
+{
+  "model": "logistic_fusion_WeightSL_NetFragLength",
+  "formula": "P(y=1|p_W,p_N)=sigmoid(beta0 + beta1*p_W + beta2*p_N)",
+  "intercept_beta0": -6.153352369542197,
+  "beta_W": 5.276294153168377,
+  "beta_N": 12.334981984809007,
+  "n_train": 287,
+  "n_test": 431,
+  "note": "Base-model train probs are in-sample (same protocol as prior Mathios SL+motif ensemble)."
+}

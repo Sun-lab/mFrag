@@ -1,0 +1,4 @@
+Evaluation set,mFrag-Weight (S/L),mFrag-Net (frag length),mFrag-Combine (simple mean),mFrag-Combine (logistic fusion)
+Overall (n=431; cancer=46),0.883,0.832,0.907,0.890
+Stage I (n=413; cancer=28),0.887,0.775,0.894,0.867
+Stage II (n=397; cancer=12),0.848,0.896,0.897,0.897

@@ -15,8 +15,7 @@ from mfrag import (
     MFragNetFragLength,
     MFragWeightMDS,
     MFragWeightSL,
-    build_mfrag_net_inputs,
-    build_mfrag_weight_inputs,
+    average_proba,
 )
 from mfrag.paths import (
     LUNG_TEST_FRAG,
@@ -33,15 +32,6 @@ def main() -> int:
     print("mFrag lung-cancer inference demo\n")
     print(f"Sample: {SAMPLE}\n")
 
-    # --- Preprocessing (when starting from an annotated fragment CSV) ---
-    # frag_csv = ROOT / "work" / f"{SAMPLE}.csv"
-    # net = build_mfrag_net_inputs(frag_csv, ROOT / "work" / "mfrag_net", write_raw=True)
-    # weight = build_mfrag_weight_inputs(
-    #     [frag_csv],
-    #     ROOT / "work" / "mfrag_net" / "fragment_length_raw_weights",
-    #     ROOT / "work" / "mfrag_weight",
-    # )
-
     # --- Inference using pre-built testing matrices ---
     frag_net = MFragNetFragLength.from_pretrained(
         main_dir=LUNG_TEST_FRAG,
@@ -53,8 +43,10 @@ def main() -> int:
         healthy_ref_dir=LUNG_TEST_HREF,
         lung_ref_dir=LUNG_TEST_LREF,
     )
-    print(f"mFrag-Net (fragment length): {frag_net.predict_proba(SAMPLE):.4f}")
-    print(f"mFrag-Net (end 4-mer motif): {motif_net.predict_proba(SAMPLE):.4f}")
+    p_net_frag = float(frag_net.predict_proba(SAMPLE))
+    p_net_motif = float(motif_net.predict_proba(SAMPLE))
+    print(f"mFrag-Net (fragment length): {p_net_frag:.4f}")
+    print(f"mFrag-Net (end 4-mer motif): {p_net_motif:.4f}")
 
     # mFrag-Weight: point to row-zscored wide CSVs produced by build_mfrag_weight_inputs
     sl_wide = ROOT / "work" / "mfrag_weight" / "slratio_row_zscore.csv"
@@ -65,11 +57,24 @@ def main() -> int:
         probs_sl, names = sl.predict_proba_from_wide_csv(sl_wide)
         probs_mds, _ = mds.predict_proba_from_wide_csv(mds_wide)
         idx = names.index(SAMPLE)
-        print(f"mFrag-Weight (S/L ratio):    {probs_sl[idx]:.4f}")
-        print(f"mFrag-Weight (MDS Shannon):  {probs_mds[idx]:.4f}")
+        p_w_sl = float(probs_sl[idx])
+        p_w_mds = float(probs_mds[idx])
+        print(f"mFrag-Weight (S/L ratio):    {p_w_sl:.4f}")
+        print(f"mFrag-Weight (MDS Shannon):  {p_w_mds:.4f}")
+
+        # Primary manuscript scores: equal-weight average per modality
+        p_mfrag_frag = average_proba(p_w_sl, p_net_frag)
+        p_mfrag_motif = average_proba(p_w_mds, p_net_motif)
+        print(f"\nmFrag (Frag length) = 0.5*(Weight S/L + Net frag): {p_mfrag_frag:.4f}")
+        print(f"mFrag (Motif)       = 0.5*(Weight MDS + Net motif): {p_mfrag_motif:.4f}")
     else:
         print(
             "mFrag-Weight: run build_mfrag_weight_inputs() first, or set sl_wide/mds_wide paths."
+        )
+        print(
+            "\nOnce both probabilities are available, the primary mFrag score is:\n"
+            "  from mfrag import average_proba\n"
+            "  mfrag_score = average_proba(weight_proba, net_proba)"
         )
     return 0
 

@@ -13,12 +13,14 @@ from mfrag.preprocessing import (
     extract_fragments_from_bam,
     prepare_fragment_csv,
 )
+from mfrag.score import average_proba
 
 __all__ = [
     "MFragWeightSL",
     "MFragWeightMDS",
     "MFragNetFragLength",
     "MFragNetEnd4Motif",
+    "average_proba",
     "extract_fragments_from_bam",
     "prepare_fragment_csv",
     "annotate_fragments_gc_weights",
@@ -30,4 +32,4 @@ __all__ = [
     "MfragWeightOutputs",
 ]
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
