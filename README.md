@@ -1,12 +1,14 @@
 # mFrag
 
-**Integrating External Epigenomic References into Cell-Free DNA Fragmentomics for Cancer Early Detection**
+**Integrating External DNA Methylation References Improves Lung Cancer Early Detection by Fragmentomics**
+
+Software and pretrained models accompanying the manuscript (Cui *et al.*; lung cancer early detection on the LUCAS cohort). This repository focuses on **lung cancer**; pretrained checkpoints and study outputs below are for lung cancer only.
 
 <p align="center">
   <img src="docs/figures/Figure1.png" alt="mFrag overview (Figure 1)" width="90%"/>
 </p>
 
-<p align="center"><em>Figure 1.</em> Overview of methylation-informed fragmentomics. Shallow cfDNA WGS yields window-level fragment-length and end-motif features; external WGBS references (healthy cfDNA and lung tumor) inform <strong>mFrag-Weight</strong> (explicit Δβ coupling + PCA/Lasso) and <strong>mFrag-Net</strong> (3-channel CNN). The primary <strong>mFrag</strong> score is the equal-weight average of the two model probabilities for the matched modality.</p>
+<p align="center"><em>Figure 1.</em> Overview of methylation-informed fragmentomics for <strong>lung cancer</strong> detection. Shallow cfDNA WGS yields window-level fragment-length and end-motif features; external WGBS references (healthy cfDNA and lung tumor) inform <strong>mFrag-Weight</strong> (explicit Δβ coupling + PCA/Lasso) and <strong>mFrag-Net</strong> (3-channel CNN). The primary <strong>mFrag</strong> score is the equal-weight average of the two model probabilities for the matched modality.</p>
 
 mFrag couples publicly available whole-genome bisulfite sequencing (WGBS) methylation references with shallow cfDNA WGS fragmentomics through two complementary models:
 
@@ -192,8 +194,8 @@ Primary pairwise model contrasts use **paired** tests on the same testing indivi
 ## Citation
 
 ```
-Cui S, …, Sun W. mFrag: Integrating External Epigenomic References into Cell-Free DNA
-Fragmentomics for Cancer Early Detection. (in preparation).
+Cui S, Scharpf R, He Q, Zheng Y, Sun W. mFrag: Integrating External DNA Methylation
+References Improves Lung Cancer Early Detection by Fragmentomics. (in preparation).
 ```
 
 ## License

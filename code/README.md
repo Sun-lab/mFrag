@@ -17,8 +17,8 @@ code/
 │   ├── preprocessing/          # BAM → mFrag-Weight / mFrag-Net feature tables
 │   ├── mfrag_weight/           # MFragWeightSL, MFragWeightMDS
 │   └── mfrag_net/              # MFragNetFragLength, MFragNetEnd4Motif
-├── mfrag_weight/               # trained Lasso models (lung + ovarian placeholder)
-├── mfrag_net/                  # trained CNN weights (lung + ovarian placeholder)
+├── mfrag_weight/               # trained Lasso models (lung cancer)
+├── mfrag_net/                  # trained CNN weights (lung cancer)
 ├── scripts/
 └── examples/
 ```

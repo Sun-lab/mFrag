@@ -1,7 +1,4 @@
-# Ovarian cancer — reserved
+# Placeholder (not used in this release)
 
-mFrag-Weight (S/L ratio) and mFrag-Net (frag length) ovarian models will be added here.
-
-Expected contents:
-- `models/` — trained pipeline or CNN weights
-- `README.md` — external reference panels and cohort metadata
+The current mFrag manuscript and pretrained models are for **lung cancer** only.
+Directories under `*/ovarian_cancer/` are reserved for possible future cancer-type extensions and are not populated in this release.

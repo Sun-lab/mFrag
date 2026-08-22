@@ -1,4 +1,4 @@
-"""mFrag: methylation-informed cfDNA fragmentomics for cancer detection."""
+"""mFrag: methylation-informed cfDNA fragmentomics for lung cancer early detection."""
 
 from mfrag.mfrag_net import MFragNetEnd4Motif, MFragNetFragLength
 from mfrag.mfrag_weight import MFragWeightMDS, MFragWeightSL

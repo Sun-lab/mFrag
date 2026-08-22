@@ -1,3 +1,3 @@
-# Ovarian cancer — reserved
+# Placeholder (not used in this release)
 
-mFrag-Net (end 4-mer motif) ovarian model will be added here.
+The current mFrag manuscript and pretrained models are for **lung cancer** only.

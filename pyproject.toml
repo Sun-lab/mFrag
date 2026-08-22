@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "mfrag"
 version = "0.1.0"
-description = "Methylation-informed cfDNA fragmentomics for cancer early detection"
+description = "Methylation-informed cfDNA fragmentomics for lung cancer early detection"
 readme = "README.md"
 requires-python = ">=3.9"
 dependencies = [

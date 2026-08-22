@@ -1,4 +1,4 @@
-"""Combine mFrag-Weight and mFrag-Net probabilities into the primary mFrag score."""
+"""Combine mFrag-Weight and mFrag-Net probabilities into the primary mFrag score (lung cancer)."""
 from __future__ import annotations
 
 from typing import Sequence
